@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "stockdatawrapper"
+version = "0.1.0"
+description = "Python Wrapper for StockData.org API"
+authors = ["Igor Kheyfets <i.a.kheyfets@gmail.com>"]
+readme = "README.md"
+packages = [{include = "wrapper"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
