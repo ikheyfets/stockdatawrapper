@@ -6,7 +6,7 @@
                 "type": "str"
             },
             "symbols": {
-                "type": "list()|str"
+                "type": "list|str"
             }
         },
         "optional": {
@@ -25,7 +25,7 @@
                 "type": "str"
             },
             "symbols": {
-                "type": "list()|str"
+                "type": "list|str"
             }
         },
         "optional": {
@@ -71,7 +71,7 @@
                 "type": "str"
             },
             "symbols": {
-                "type": "list()|str"
+                "type": "list|str"
             }
         },
         "optional": {
@@ -117,7 +117,7 @@
                 "type": "str"
             },
             "symbols": {
-                "type": "list()|str"
+                "type": "list|str"
             }
         },
         "optional": {
