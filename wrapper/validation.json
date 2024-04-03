@@ -1,0 +1,154 @@
+{
+    "Stock prices": {
+        "url": "https://api.stockdata.org/v1/data/quote?",
+        "required": {
+            "api_token": {
+                "type": "str"
+            },
+            "symbols": {
+                "type": "list()|str"
+            }
+        },
+        "optional": {
+            "extended_hours": {
+                "type": "bool"
+            },
+            "key_by_ticker": {
+                "type": "bool"
+            }
+        }
+    },
+    "Instraday data (adjusted)": {
+        "url": "https://api.stockdata.org/v1/data/intraday/adjusted?",
+        "required": {
+            "api_token": {
+                "type": "str"
+            },
+            "symbols": {
+                "type": "list()|str"
+            }
+        },
+        "optional": {
+            "interval": {
+                "type": "str",
+                "options": ["minute", "hour"]
+            },
+            "sort": {
+                "type": "str",
+                "options": ["asc", "desc"]
+            },
+            "date_from": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d", "%Y-%m", "%Y"]
+            },
+            "date_to": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d", "%Y-%m", "%Y"]
+            },
+            "date": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d"]
+            },
+            "extended_hours": {
+                "type": "bool"
+            },
+            "key_by_date": {
+                "type": "bool"
+            },
+            "key_by_ticker": {
+                "type": "bool"
+            },
+            "format": {
+                "type": "str",
+                "options": ["csv"]
+            }
+        }
+    },
+    "Instraday data (unadjusted)": {
+        "url": "https://api.stockdata.org/v1/data/intraday?",
+        "required": {
+            "api_token": {
+                "type": "str"
+            },
+            "symbols": {
+                "type": "list()|str"
+            }
+        },
+        "optional": {
+            "interval": {
+                "type": "str",
+                "options": ["minute", "hour"]
+            },
+            "sort": {
+                "type": "str",
+                "options": ["asc", "desc"]
+            },
+            "date_from": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d", "%Y-%m", "%Y"]
+            },
+            "date_to": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d", "%Y-%m", "%Y"]
+            },
+            "date": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d"]
+            },
+            "extended_hours": {
+                "type": "bool"
+            },
+            "key_by_date": {
+                "type": "bool"
+            },
+            "key_by_ticker": {
+                "type": "bool"
+            },
+            "format": {
+                "type": "str",
+                "options": ["csv"]
+            }
+        }
+    },
+    "End-of-day historical data": {
+        "url": "https://api.stockdata.org/v1/data/eod?",
+        "required": {
+            "api_token": {
+                "type": "str"
+            },
+            "symbols": {
+                "type": "list()|str"
+            }
+        },
+        "optional": {
+            "interval": {
+                "type": "str",
+                "options": ["day", "week", "month", "quarter", "year"]
+            },
+            "sort": {
+                "type": "str",
+                "options": ["asc", "desc"]
+            },
+            "date_from": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d", "%Y-%m", "%Y"]
+            },
+            "date_to": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d", "%Y-%m", "%Y"]
+            },
+            "date": {
+                "type": "str",
+                "timestamp_formats": ["%Y-%m-%d"]
+            },
+            "key_by_date": {
+                "type": "bool"
+            },
+            "format": {
+                "type": "str",
+                "options": ["csv"]
+            }
+        }
+    }
+    
+}
