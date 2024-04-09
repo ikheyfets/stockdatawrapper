@@ -47,15 +47,3 @@ class StockDataApiWrapper():
         endpoint = Endpoint(type='End-of-day historical data', kwargs=new_kwargs)
         self.validator.validate(endpoint=endpoint)
         return endpoint.call()
-    
-    def get_stock_splits(self, symbols):
-        new_kwargs = {"api_token": self.key, "symbols": symbols}
-        endpoint = Endpoint(type='Stock splits', kwargs=new_kwargs)
-        self.validator.validate(endpoint=endpoint)
-        return endpoint.call()
-    
-    def get_stock_dividents(self, symbols):
-        new_kwargs = {"api_token": self.key, "symbols": symbols}
-        endpoint = Endpoint(type='Stock dividents', kwargs=new_kwargs)
-        self.validator.validate(endpoint=endpoint)
-        return endpoint.call()
