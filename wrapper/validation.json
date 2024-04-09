@@ -149,6 +149,34 @@
                 "options": ["csv"]
             }
         }
+    },
+    "Stock splits": {
+        "url": "https://api.stockdata.org/v1/data/splits?",
+        "required": {
+            "api_token": {
+                "type": "str"
+            },
+            "symbols": {
+                "type": "list|str"
+            }
+        },
+        "optional": {
+  
+        }
+    },
+    "Stock dividents": {
+        "url": "https://api.stockdata.org/v1/data/dividends?",
+        "required": {
+            "api_token": {
+                "type": "str"
+            },
+            "symbols": {
+                "type": "list|str"
+            }
+        },
+        "optional": {
+  
+        }
     }
     
 }

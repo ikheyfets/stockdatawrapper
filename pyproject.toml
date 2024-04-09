@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "stockdatawrapper"
-version = "0.1.0"
+version = "0.2.0"
 description = "Python Wrapper for StockData.org API"
 authors = ["Igor Kheyfets <i.a.kheyfets@gmail.com>"]
 readme = "README.md"
