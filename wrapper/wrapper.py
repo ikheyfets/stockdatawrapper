@@ -59,3 +59,23 @@ class StockDataApiWrapper():
         endpoint = Endpoint(type='Stock dividents', kwargs=new_kwargs)
         self.validator.validate(endpoint=endpoint)
         return endpoint.call()
+    
+    def get_all_news(self, **kwargs):
+        new_kwargs = {"api_token": self.key}
+        new_kwargs.update(kwargs)
+        endpoint = Endpoint(type='Finance and market news', kwargs=new_kwargs)
+        self.validator.validate(endpoint=endpoint)
+        return endpoint.call()
+    
+    def get_similar_news(self, uuid, **kwargs):
+        new_kwargs = {"api_token": self.key, "uuid": uuid}
+        new_kwargs.update(kwargs)
+        endpoint = Endpoint(type='Similar news', kwargs=new_kwargs)
+        self.validator.validate(endpoint=endpoint)
+        return endpoint.call()
+
+    def get_news_by_uuid(self, uuid):
+        new_kwargs = {"api_token": self.key, "uuid": uuid}
+        endpoint = Endpoint(type='News by uuid', kwargs=new_kwargs)
+        self.validator.validate(endpoint=endpoint)
+        return endpoint.call()
