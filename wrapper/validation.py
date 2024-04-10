@@ -74,6 +74,8 @@ class RequestValidator:
         for argument, value in endpoint.parameters.items():
             if type(value) == list:
                 url += f"{argument}={','.join(value)}&"
+            elif argument == 'uuid':
+                url += f"{value}"
             else:
                 url += f"{argument}={value}&"
         url = url[:-1]
