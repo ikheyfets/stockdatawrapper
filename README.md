@@ -15,7 +15,7 @@ This is a Python wrapper for the [stockdata.org](https://www.stockdata.org) API,
 ```
 from stockdatawrapper import StockDataApiWrapper
 
-wrapper = StockDataApiWrapper('API_TOKEN_STRING')
+wrapper = StockDataApiWrapper(key='API_TOKEN_STRING')
 wrapper.get_stock_prices('AAPL')
 ```
 
@@ -24,7 +24,7 @@ or store the token as an environment variable and pass the name of the environme
 ```
 from stockdatawrapper import StockDataApiWrapper
 
-wrapper = StockDataApiWrapper('API_TOKEN_ENVIRONMENT_VARIABLE_NAME')
+wrapper = StockDataApiWrapper(key_env_name='API_TOKEN_ENVIRONMENT_VARIABLE_NAME')
 wrapper.get_stock_prices('AAPL')
 ```
 

@@ -46,8 +46,6 @@ class RequestValidator:
                     raise Exception(f"{value} is not an acceptable option for {argument}. Choose from {argument_params['options']}")
                 
             # Check for timestamp formatting
-            
-            
             if 'timestamp_formats' in argument_params.keys():
                 acceptable_date_formats = argument_params['timestamp_formats']
                 date_checks = []
@@ -59,6 +57,15 @@ class RequestValidator:
                         date_checks.append(False)
                 if True not in date_checks:
                     raise Exception(f"Your date {value} does not fit any of the available time formats {acceptable_date_formats}")
+                
+            # Check for ranged arguments
+            if 'min' in argument_params.keys():
+                if value < argument_params['min']:
+                    raise Exception(f"Your specified {value} for {argument}, that is less than possible minimum of {argument_params['min']}")
+            if 'max' in argument_params.keys():
+                if value > argument_params['max']:
+                    raise Exception(f"Your specified {value} for {argument}, that is greater than possible maximum of {argument_params['max']}")
+
         
         endpoint.is_valid=True
 
@@ -67,6 +74,8 @@ class RequestValidator:
         for argument, value in endpoint.parameters.items():
             if type(value) == list:
                 url += f"{argument}={','.join(value)}&"
+            elif argument == 'uuid':
+                url += f"{value}"
             else:
                 url += f"{argument}={value}&"
         url = url[:-1]

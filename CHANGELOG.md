@@ -1,11 +1,12 @@
 # Change Log
 
-
 ## [0.2.0] - 2024-04-08
 
 ### Added
 
 * Added methods covered in the Stock Splits and Dividents section of the API doc to StockDataApiWrapper class and corresponding criteria in ./wrapper/validation.json
+* Added validation for range-based arguments for current and future endpoints
+* Added a way for UUIDs to be added to the API call
 
 ### Changed
 
