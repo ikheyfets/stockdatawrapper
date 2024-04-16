@@ -1,10 +1,11 @@
 [tool.poetry]
 name = "stockdatawrapper"
-version = "0.2.0"
+version = "0.2.1"
 description = "Python Wrapper for StockData.org API"
 authors = ["Igor Kheyfets <i.a.kheyfets@gmail.com>"]
 readme = "README.md"
-packages = [{include = "wrapper"}]
+packages = [{include = "stockdatawrapper"}]
+
 
 [tool.poetry.dependencies]
 python = "^3.10"

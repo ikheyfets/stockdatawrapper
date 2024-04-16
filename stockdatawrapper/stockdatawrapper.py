@@ -4,8 +4,8 @@ import warnings
 
 from dotenv import load_dotenv
 
-from wrapper.validation import RequestValidator
-from wrapper.endpoints import Endpoint
+from stockdatawrapper.validation import RequestValidator
+from stockdatawrapper.endpoints import Endpoint
 
 
 class StockDataApiWrapper():

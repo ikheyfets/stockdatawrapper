@@ -1,13 +1,14 @@
 import json
 
-from wrapper.endpoints import Endpoint
+from stockdatawrapper.endpoints import Endpoint
 from datetime import datetime
+import pkg_resources
+
 
 class RequestValidator:
     def __init__(self) -> None:
         self.endpoint_data = {}
-        with open('./wrapper/validation.json', 'r') as endpoint_data:
-            self.endpoint_data = json.load(endpoint_data)
+        self.endpoint_data = json.loads(pkg_resources.resource_string(__name__, 'validation.json'))
         if self.endpoint_data == {}:
             raise Exception(f"There is an issue with endpoint data json, please check")
 
