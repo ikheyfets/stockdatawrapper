@@ -1,5 +1,17 @@
 # Change Log
 
+## [0.2.1] - 2024-04-16
+
+### Added
+
+### Changed
+
+* renamed *wrapper.py* to *stockdatawrapper.py* for a better import statement 
+
+### Fixed
+
+* *validation.json* is now included in pyproject.toml, so the package is operational after building it with `poetry build`
+
 ## [0.2.0] - 2024-04-08
 
 ### Added
